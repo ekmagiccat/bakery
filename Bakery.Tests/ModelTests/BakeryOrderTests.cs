@@ -9,7 +9,7 @@ namespace Bakery.Tests
         [TestMethod]
         public void Output_ReturnsBreadOrder()
         {
-            int UserBread = 2;
+            int UserBread = 3;
             int BreadTotal = UserBread * 5;
             Bread newBread = new Bread(UserBread);
 
