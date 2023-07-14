@@ -4,6 +4,13 @@ using System;
 namespace BakeryOrder.Models
 {
 
-    public class BakeryOrderBread
-    { }
+    public class Bread
+    { 
+        public int BreadOrder;
+    }
+
+    public class Pastry
+    {
+        public int PastryOrder;
+    }
 }
