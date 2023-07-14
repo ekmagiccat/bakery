@@ -10,11 +10,12 @@ namespace Bakery.Tests
         public void Output_ReturnsBreadOrder()
         {
             int UserBread = 2;
+            int BreadTotal = UserBread * 5;
             Bread newBread = new Bread(UserBread);
 
             int result = newBread.Output(UserBread);
 
-            Assert.AreEqual(UserBread, result);
+            Assert.AreEqual(BreadTotal, result);
         }
     }
 }
