@@ -26,7 +26,7 @@ namespace Bakery.Tests
             int UserPastry = 4;
             int pastryTotal = UserPastry * 2;
             int freePastries = UserPastry / 4;
-            pastryTotal -= (freePastries * 3);
+            pastryTotal -= (freePastries * 2);
             Pastry pastryOutput = new Pastry(UserPastry);
 
             int result2 = pastryOutput.Output2(UserPastry);
