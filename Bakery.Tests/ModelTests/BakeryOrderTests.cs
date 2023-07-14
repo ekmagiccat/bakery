@@ -9,13 +9,15 @@ namespace Bakery.Tests
         [TestMethod]
         public void Output_ReturnsBreadOrder()
         {
-            int UserBread = 3;
-            int BreadTotal = UserBread * 5;
+            int UserBread = 6;
+            int breadTotal = UserBread * 5;
+            int freeLoaves = UserBread / 3;
+            breadTotal -= (freeLoaves * 5);
             Bread newBread = new Bread(UserBread);
 
             int result = newBread.Output(UserBread);
 
-            Assert.AreEqual(BreadTotal, result);
+            Assert.AreEqual(breadTotal, result);
         }
     }
 }

@@ -12,26 +12,21 @@ namespace BakeryOrder.Models
             UserBread = userBread;
         }
 
-        public int Output(int UserBread)
+        public int Output(int userBread)
         {
-            int BreadTotal = UserBread * 5;
+            int breadTotal = UserBread * 5;
 
-            for (int index = 1; index <= UserBread; index++)
+            if (UserBread >= 3)
             {
-                if (index % 3 == 0 && index <= 3)
-                {
-                    return BreadTotal - 5;
-                }
-                else if (index % 3 != 0)
-                {
-                    return BreadTotal;
-                }
+                int freeLoaves = UserBread / 3;
+                breadTotal -= (freeLoaves * 5);
             }
 
-            return BreadTotal;
+            return breadTotal;
         }
     }
 }
+
 
 
 //         public class Pastry

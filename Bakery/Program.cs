@@ -7,7 +7,7 @@ namespace BakeryOrder
     {
         static void Main()
         {
-            Console.WriteLine("*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
+            Console.WriteLine("--------------------------------------------");
             Console.WriteLine("Welcome to (っ◔◡◔)っ ♥ Pierre's Bakery♥ !");
             Console.WriteLine("We have fresh baked breads and pastries for you!");
             Console.WriteLine("");
