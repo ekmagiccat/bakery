@@ -25,13 +25,26 @@ namespace BakeryOrder.Models
             return breadTotal;
         }
     }
+    public class Pastry
+    {
+        public int UserPastry { get; set; }
+
+        public Pastry(int userPastry)
+        {
+            UserPastry = userPastry;
+        }
+
+        public int Output2(int userPastry)
+        {
+            int pastryTotal = UserPastry * 2;
+
+            if (UserPastry >= 4)
+            {
+                int freePastries = UserPastry / 4;
+                pastryTotal -= (freePastries * 2);
+            }
+
+            return pastryTotal;
+        }
+    }
 }
-
-
-
-//         public class Pastry
-//         {
-//             public int PastryOrder;
-//         }
-//     }
-// }

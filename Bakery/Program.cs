@@ -15,10 +15,11 @@ namespace BakeryOrder
             Console.WriteLine("How many loaves of bread would you like?");
             string userInput = Console.ReadLine();
 
+            int result = 0;
             if (int.TryParse(userInput, out int userBread))
             {
                 Bread breadOutput = new Bread(userBread);
-                int result = breadOutput.Output(userBread);
+                result = breadOutput.Output(userBread);
                 Console.WriteLine("Your bread total will be $" + result);
             }
             else
@@ -26,12 +27,24 @@ namespace BakeryOrder
                 Console.WriteLine("Invalid input. Please enter a valid number.");
             }
 
-
             Console.WriteLine("Pricing: Pastries - $2 per pastry or buy 3, get 1 free!");
-            Console.WriteLine("How many pastries of would you like?");
-            Console.WriteLine("Your pastry total will be $ ");
+            Console.WriteLine("How many pastries would you like?");
+            string userInput2 = Console.ReadLine();
 
-            Console.WriteLine("Thank you for your order! Your final total will be $ ");
+            int result2 = 0;
+            if (int.TryParse(userInput2, out int userPastry))
+            {
+                Pastry pastryOutput = new Pastry(userPastry);
+                result2 = pastryOutput.Output2(userPastry);
+                Console.WriteLine("Your pastry total will be $" + result2);
+            }
+            else
+            {
+                Console.WriteLine("Invalid input. Please enter a valid number.");
+            }
+
+            int finalTotal = result + result2;
+            Console.WriteLine("Thank you for your order! Your final total will be $" + finalTotal);
 
 
         }
