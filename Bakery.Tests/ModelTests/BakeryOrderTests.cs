@@ -6,6 +6,13 @@ namespace Bakery.Tests
     [TestClass]
     public class BakeryOrderBreadTests
     {
+
+        [TestMethod]
+        public void BreadOrderConstructor_CreatesNewBreadOrder()
+        {
+            Bread newBread = new Bread(6);
+            Assert.AreEqual(typeof(Bread), newBread.GetType());
+        }
         [TestMethod]
         public void Output_ReturnsBreadOrder()
         {
